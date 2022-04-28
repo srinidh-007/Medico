@@ -1,0 +1,17 @@
+
+.inp> input{
+    width: 50%;
+}
+.inp>label{
+    align-content: left;
+    font-weight: 700;
+    font-size: large;
+    
+}
+
+.form-div-main>div>input{
+    text-align: left;
+}
+.form-div-main{
+    padding: auto;
+}

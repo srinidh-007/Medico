@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 1rem;
+  min-height: 300px;
+  text-align: justify;
+  /* border: 1px solid black; */
+  font-family: 'Merriweather', serif;
+  color: black;
+  font-weight: 300;
+}
+
+.column label {
+  margin-top: 20px;
+}
+
+.row {
+  clear: both;
+  font-family: 'Merriweather', serif;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+.btn_danger {
+  outline: 1px solid red;
+}
+
+.btn_primary {
+  outline: 1px solid blue;
+}
+
+.btn_primary:hover, .btn_danger:hover {
+  color: white;
+}
+
+
+.back_btn:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.buttons {
+  margin-top:-100px;
+}

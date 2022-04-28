@@ -1,0 +1,56 @@
+@import url(https://unpkg.com/@webpixels/css@1.1.5/dist/index.css);
+
+/* Bootstrap Icons */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.0/font/bootstrap-icons.min.css");
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.thead {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 217px;
+  overflow: visible;
+  z-index: 1000;
+}
+
+.table-responsive, .table {
+  overflow: visible;
+}
+
+.card-header {
+  position: sticky;
+  top: 140px;
+  overflow: visible;
+  z-index: 1000;
+  background-color: white;
+}
+
+
+.search-head {
+  float: left;
+  margin-top: 6px;
+}
+
+.search-input {
+  float: right;
+  padding: 6px;
+  font-size: 12px;
+  width: 300px;
+  border-style: solid;
+  border-width: 2px;
+  outline: none;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+}
+
+.search-input:focus {
+  box-shadow: none;
+
+}
+
+.search-input::placeholder {
+  color: rgb(0 0 0 / 0.4);
+}

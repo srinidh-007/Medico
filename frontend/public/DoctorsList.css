@@ -1,0 +1,129 @@
+@import url(https://unpkg.com/@webpixels/css@1.1.5/dist/index.css);
+
+/* Bootstrap Icons */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.0/font/bootstrap-icons.min.css");
+
+/* playfaire font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.thead {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 210px;
+  overflow: visible;
+  z-index: 1000;
+}
+
+.table-responsive, .table {
+  overflow: visible;
+}
+
+.card-header {
+  position: sticky;
+  top: 149px;
+  overflow: visible;
+  z-index: 1000;
+  background-color: white;
+}
+
+
+.search-head {
+  float: left;
+  margin-top: 6px;
+}
+
+.search-input {
+  float: right;
+  padding: 6px;
+  font-size: 12px;
+  width: 300px;
+  border-style: solid;
+  border-width: 2px;
+  outline: none;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+}
+
+.search-input:focus {
+  box-shadow: none;
+
+}
+
+.search-input::placeholder {
+  color: rgb(0 0 0 / 0.4);
+}
+
+.header {
+  padding-top: 20px;
+}
+
+.header h1 {
+  float: left;
+  font-size: 30px;
+  font-weight: 600;
+
+}
+
+.header .create-button span {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  padding: 5px 5px;
+}
+
+.nav a {
+  margin-top: 20px !important;
+  font-size: 14px;
+  padding-bottom: 30px !important;
+}
+
+main {
+  text-align: left;
+}
+
+.search-head {
+  font-size: 16px;
+  padding: 2px;
+}
+
+.thead th {
+  font-size: 11px !important;
+  padding: 15px !important;
+}
+
+#doctors td {
+  padding: 16px 24px;
+  font-size: 13px;
+}
+
+
+#doctors td img {
+  width: 40px;
+  height: 40px;
+}
+
+#doctors .btn {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+#doctors tr:hover {
+  background-color: #fafeff;
+}
+
+.nav {
+  height: 84px !important;
+}
+
+.nav-link:hover, .nav-link:focus, .nav-link:active {
+  background-color: white !important;
+}
+
+.create-button-patient:hover {
+  cursor: no-drop;
+}

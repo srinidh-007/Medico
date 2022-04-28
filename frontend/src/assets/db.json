@@ -1,0 +1,49 @@
+{
+  "doctors": [
+    {
+      "id": 3,
+      "f_name": "Sandeep",
+      "l_name": "Thadem",
+      "email": "sandy.T@gmail.com",
+      "user_name": "sandy",
+      "mobile": "6824561230",
+      "dob": "10/05/2000",
+      "city": "Salem",
+      "state": "Telangana",
+      "specialiation": "Pediatrics",
+      "year_of_exp": 2,
+      "is_admin": false,
+      "is_doctor": true
+    },
+    {
+      "f_name": "Sree Nithish",
+      "l_name": "B",
+      "email": "sreenithishb@gmail.com",
+      "user_name": "sree_nithish_b",
+      "mobile": "7894561230",
+      "dob": "15/09/2000",
+      "city": "Salem",
+      "state": "Tamil Nadu",
+      "specialiation": "Cardiologist",
+      "year_of_exp": "6",
+      "is_admin": false,
+      "is_doctor": true,
+      "id": 4
+    },
+    {
+      "f_name": "Harshith",
+      "l_name": "Jupuru",
+      "email": "harshith.j@gmail.com",
+      "user_name": "jupuru_harshith",
+      "mobile": "7894561230",
+      "dob": "15/09/2000",
+      "city": "Salem",
+      "state": "Tamil Nadu",
+      "specialiation": "Cardiologist",
+      "year_of_exp": "6",
+      "is_admin": false,
+      "is_doctor": true,
+      "id": 5
+    }
+  ]
+}

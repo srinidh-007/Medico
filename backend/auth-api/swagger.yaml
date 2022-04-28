@@ -1,0 +1,748 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Doctors Appointments API
+  description: An API to do CRUD operations
+
+servers:
+  - url: http://localhost:8000/
+  - url: http://localhost:4000/
+
+tags:
+  - name: Doctors
+    description: API to manage the doctors.
+    externalDocs:
+      description: "Find out more"
+      url: "http://localhost:3000/doctors"
+  - name: Patients
+    description: API to manage the patients.
+  - name: Appointments
+    description: API to manage the doctors appointments.
+  - name: PatientAppos
+    description: API to manage the patients appointments.
+  - name: SignIn
+    description: API to manage the signIn of users.
+
+
+paths:
+  /doctors:
+    get:
+      summary: List of all doctors
+      tags: [Doctors]
+      responses:
+        "200":
+          description: The list of doctors rendered successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Doctor'
+    post:
+      summary: Creates a doctor.
+      tags: [Doctors]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Doctor'
+      responses:
+        '200':
+          description: OK
+        '201':
+          description: Created
+  /doctors/{doctorID}:
+    get:
+      summary: Returns a doctor by Id
+      tags: [Doctors]
+      parameters:
+        - name: doctorID
+          in: path
+          required: true
+          description: parameter for doctor ID
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Doctor'
+    put:
+      summary: Updates a doctor details by Id
+      tags: [Doctors]
+      parameters:
+        - name: doctorID
+          in: path
+          required: true
+          description: parameter for doctor ID
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Doctor'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Doctor'
+    delete:
+      summary: deletes a doctor by Id
+      tags: [Doctors]
+      parameters:
+        - name: doctorID
+          in: path
+          required: true
+          description: parameter for doctor ID
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Doctor'
+  /doctors/{queryTerm}:
+    get:
+      summary: Returns a doctor if given term exists in his details
+      tags: [Doctors]
+      parameters:
+        - name: queryTerm
+          in: path
+          required: true
+          description: parameter for querying term
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Doctor'
+  /patients:
+    get:
+      summary: List of all patients
+      tags: [Patients]
+      responses:
+        "200":
+          description: The list of patients.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Patient'
+    post:
+      summary: Creates a Patient.
+      tags: [Patients]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Patient'
+      responses:
+        '201':
+          description: Created
+        '200':
+          description: OK
+  /patients/{patientID}:
+    get:
+      summary: Returns a patient by Id
+      tags: [Patients]
+      parameters:
+        - name: patientID
+          in: path
+          required: true
+          description: parameter for patient ID
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Patient'
+    put:
+      summary: Updates a patient details by Id
+      tags: [Patients]
+      parameters:
+        - name: patientID
+          in: path
+          required: true
+          description: parameter for patient ID
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Patient'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Patient'
+    delete:
+      summary: deletes a patient by Id
+      tags: [Patients]
+      parameters:
+        - name: patientID
+          in: path
+          required: true
+          description: parameter for patient ID
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Patient'
+
+  /Appointments:
+    get:
+      summary: List of all Appointments
+      tags: [Appointments]
+      responses:
+        "200":
+          description: The list of Appointments.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Appointment'
+    post:
+      summary: Creates a Appointment.
+      tags: [Appointments]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Appointment'
+      responses:
+        '201':
+          description: Created
+  /Appointments/{appointmentID}:
+    get:
+      summary: Returns a doctors appointment by appointment Id
+      tags: [Appointments]
+      parameters:
+        - name: appointmentID
+          in: path
+          required: true
+          description: parameter for patient ID
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Appointment'
+    # put:
+    #   summary: Updates a patient details by Id
+    #   tags: [Patients]
+    #   parameters:
+    #     - name: patientID
+    #       in: path
+    #       required: true
+    #       description: parameter for patient ID
+    #       schema:
+    #         type: string
+    #   requestBody:
+    #     required: true
+    #     content:
+    #       application/json:
+    #         schema:
+    #           $ref: '#/components/schemas/Patient'
+    #   responses:
+    #     '200':
+    #       description: OK
+    #       content:
+    #         application/json:
+    #           schema:
+    #             $ref: '#/components/schemas/Patient'
+    delete:
+      summary: deletes an Appointment by Id
+      tags: [Appointments]
+      parameters:
+        - name: appointmentID
+          in: path
+          required: true
+          description: parameter for Appointment ID
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Appointment'
+
+  /patientappos:
+    get:
+      summary: List of all patients Appointments
+      tags: [PatientAppos]
+      responses:
+        "200":
+          description: The list of all patients Appointments.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatientAppo'
+    post:
+      summary: Creates a patient Appointment.
+      tags: [PatientAppos]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatientAppo'
+      responses:
+        '201':
+          description: Created
+  /patientappos/{PatientAppoID}:
+    get:
+      summary: Returns a patients appointment by appointment Id
+      tags: [PatientAppos]
+      parameters:
+        - name: PatientAppoID
+          in: path
+          required: true
+          description: parameter for patient appointment ID
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatientAppo'
+    # put:
+    #   summary: Updates a patient details by Id
+    #   tags: [Patients]
+    #   parameters:
+    #     - name: patientID
+    #       in: path
+    #       required: true
+    #       description: parameter for patient ID
+    #       schema:
+    #         type: string
+    #   requestBody:
+    #     required: true
+    #     content:
+    #       application/json:
+    #         schema:
+    #           $ref: '#/components/schemas/Patient'
+    #   responses:
+    #     '200':
+    #       description: OK
+    #       content:
+    #         application/json:
+    #           schema:
+    #             $ref: '#/components/schemas/Patient'
+    delete:
+      summary: deletes a patient Appointment by Id
+      tags: [PatientAppos]
+      parameters:
+        - name: PatientAppoID
+          in: path
+          required: true
+          description: parameter for patient Appointment ID
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatientAppo'
+  /users/signin:
+    post:
+      summary: Login the user if the credentials given were correct
+      tags: [SignIn]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SignIn'
+      responses:
+        "200":
+          description: User logged in successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SignIn'
+
+
+
+components:
+  schemas:
+    Doctor:
+      type: object
+      required:
+        - password
+        - f_name
+        - l_name
+        - email
+        - user_name
+        - profile_img
+        - gender
+        - mobile
+        - dob
+        - city
+        - state
+        - avg_charge
+        - specialization
+        - year_of_exp
+        - is_admin
+        - is_doctor
+        - bio
+      properties:
+        id:
+          type: string
+          description: The auto-generated id of the doctor
+        f_name:
+          type: string
+          description: The first name of the doctor
+        l_name:
+          type: string
+          description: The last name of the doctor
+        password:
+          type: string
+          description: The password of the doctor
+        email:
+          type: string
+          description: The email id of the doctor
+        user_name:
+          type: string
+          description: The user_name of the doctor
+        profile_img:
+          type: string
+          description: The profile image name of the doctor
+        gender:
+          type: string
+          description: The gender of the doctor
+        mobile:
+          type: string
+          description: The mobile number of the doctor
+        dob:
+          type: string
+          description: The date of birth of the doctor
+        city:
+          type: string
+          description: The city of the doctor
+        state:
+          type: string
+          description: The state of the doctor
+        avg_charge:
+          type: string
+          description: The average charges of the doctor
+        specialization:
+          type: string
+          description: The specialization of the doctor
+        year_of_exp:
+          type: string
+          description: The years of experience of the doctor
+        is_admin:
+          type: boolean
+          description: doctor is admin or not
+        is_doctor:
+          type: boolean
+          description: doctor is doctor or not
+        bio:
+          type: string
+          description: The bio of the doctor
+      example:
+        f_name: Iron
+        l_name: Man
+        password: Abcd1234
+        email: Doctor@hospital.com
+        user_name: IMan
+        profile_img: http://localhost:3000/images/male_avatar_red.svg
+        gender: Male
+        mobile: +91 1234567890
+        dob: 15-01-1995
+        city: Vijayawada
+        state: Andhra Pradesh
+        avg_charge: 300/-
+        specialization: Cardiologist
+        year_of_exp: 5
+        is_admin: true
+        is_doctor: true
+        bio: Lorum Ipsum
+
+    Patient:
+      type: object
+      required:
+        - password
+        - f_name
+        - l_name
+        - email
+        - user_name
+        - profile_img
+        - gender
+        - mobile
+        - dob
+        - city
+        - state
+        - blood_group
+        - profession
+        - is_admin
+        - is_doctor
+        - bio
+      properties:
+        id:
+          type: string
+          description: The auto-generated id of the patient
+        password:
+          type: string
+          description: The password of the patient
+        f_name:
+          type: string
+          description: The first name of the patient
+        l_name:
+          type: string
+          description: The last name of the patient
+        email:
+          type: string
+          description: The email id of the patient
+        user_name:
+          type: string
+          description: The user_name of the patient
+        profile_img:
+          type: string
+          description: The profile image name of the patient
+        gender:
+          type: string
+          description: The gender of the patient
+        mobile:
+          type: string
+          description: The mobile number of the patient
+        dob:
+          type: string
+          description: The date of birth of the patient
+        city:
+          type: string
+          description: The city of the patient
+        state:
+          type: string
+          description: The state of the patient
+        blood_group:
+          type: string
+          description: The blood group of the patient
+        profession:
+          type: string
+          description: The profession of the patient
+        is_admin:
+          type: boolean
+          description: Patient is admin or not
+        is_doctor:
+          type: boolean
+          description: Patient is doctor or not
+        bio:
+          type: string
+          description: The bio of the patient
+      example:
+        f_name: Harry
+        l_name: Porter
+        password: Abcd4321
+        email: patient@hospital.com
+        user_name: HPorter
+        profile_img: images/male_avatar_red.svg
+        gender: Male
+        mobile: +91 9966541320
+        dob: 15-01-2001
+        city: Vijayawada
+        state: Andhra Pradesh
+        blood_group: A+
+        profession: Adult guidance worker
+        is_admin: false
+        is_doctor: false
+        bio: Lorum Ipsum
+
+    Appointment:
+      type: object
+      required:
+        - docId
+        - docName
+        - date
+        - month
+        - year
+        - time
+        - patName
+        - patEmail
+        - patPhone
+        - patDOB
+        - patAge
+        - patLoc
+      properties:
+        id:
+          type: string
+          description: The auto-generated id of the doctor appointments
+        docId:
+          type: string
+          description: The id of the doctor
+        docName:
+          type: string
+          description: The name of the doctor
+        date:
+          type: number
+          description: The date of the Appointment
+        month:
+          type: number
+          description: The month of the Appointment
+        year:
+          type: number
+          description: The year of the Appointment
+        time:
+          type: string
+          description: The time of the Appointment
+        patName:
+          type: string
+          description: The name of the patient
+        patEmail:
+          type: string
+          description: The email id of the patient
+        patPhone:
+          type: string
+          description: The phone number of the patient
+        patDOB:
+          type: string
+          description: The date of birth of the patient
+        patAge:
+          type: string
+          description: The age of the patient
+        patLoc:
+          type: string
+          description: The location of the patient
+      example:
+        docId: 6249530035bbb653f6b4b3ed
+        docName: SreeNithish
+        date: 12
+        month: 1
+        year: 2020
+        time: 10-11AM
+        patName: Harshith
+        patEmail: myemail@id.com
+        patPhone: 9876543210
+        patDOB: 2000-09-20
+        patAge: 21
+        patLoc: Vizag
+
+    PatientAppo:
+      type: object
+      required:
+        - docId
+        - patId
+        - docName
+        - date
+        - month
+        - year
+        - time
+        - docMobile
+        - docSpecialization
+
+      properties:
+        id:
+          type: string
+          description: The auto-generated id of the patient appointment
+        docId:
+          type: string
+          description: The id of the doctor
+        patId:
+          type: string
+          description: The id of the patient
+        docName:
+          type: string
+          description: The name of the doctor
+        date:
+          type: number
+          description: The date of the Appointment
+        month:
+          type: number
+          description: The month of the Appointment
+        year:
+          type: number
+          description: The year of the Appointment
+        time:
+          type: string
+          description: The time of the Appointment
+        docMobile:
+          type: string
+          description: The mobile number of the doctor
+        docSpecialization:
+          type: string
+          description: The specialization of the doctor
+      example:
+        docId: 6249530035bbb653f6b4b3ed
+        patId: 624953acdfb27e2cdffbf125
+        docName: SreeNithish
+        date: 12
+        month: 1
+        year: 2020
+        time: 10-11AM
+        docMobile: 9876543201
+        docSpecialization: Cardiologist
+
+    SignIn:
+      type: object
+      required:
+        - username
+        - password
+      properties:
+        username:
+          type: string
+          description: The username of the user
+        password:
+          type: string
+          description: The password of the user
+      example:
+        username: sree_nithish_b
+        password: '123456'
+
+# definitions:
+#   Doctor:
+#     type: "object"
+#     properties:
+#       id:
+#         type: "integer"
+#         format: "int64"
+#       petId:
+#         type: "integer"
+#         format: "int64"
+#       quantity:
+#         type: "integer"
+#         format: "int32"
+#       shipDate:
+#         type: "string"
+#         format: "date-time"
+#       status:
+#         type: "string"
+#         description: "Order Status"
+#         enum:
+#         - "placed"
+#         - "approved"
+#         - "delivered"
+#       complete:
+#         type: "boolean"
+#         default: false
+#     xml:
+#       name: "Doctor"

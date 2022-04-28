@@ -1,0 +1,665 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+  font-family: 'Lato', sans-serif;
+  color: #1f4568;
+
+}
+
+.home_wrap {
+	background-image: url(https://image.ibb.co/de6JzG/bitmap_1_1.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center
+
+}
+
+.section2 {
+	width: 100%;
+	margin: 5vh auto
+}
+
+.section2 .cards {
+	margin: auto;
+	width: 90%;
+	display: flex
+}
+
+.section2 .cards .card {
+	width: 24%;
+	margin: 20px;
+	text-align: Center
+}
+
+.section2 .cards .card .fa {
+	font-size: 3em;
+	color: #01bcd4
+}
+
+.section2 .cards .card p {
+	color: rgba(1, 1, 1, .7)
+}
+
+.section2 h1 {
+	font-size: 20px;
+	font-weight: 700;
+	color: #000
+}
+
+.sect {
+	padding: 90px 0;
+	position: relative
+}
+
+.collapse {
+	display: block
+}
+
+.sect__violet {
+	background-color: #6f79ff
+}
+
+.sect__padding_bottom {
+	padding-bottom: 115px
+}
+
+.sect__padding_top {
+	padding-top: 90px
+}
+
+.row__margin {
+	margin-top: 45px
+}
+
+.row__title {
+	text-align: center;
+	font-size: 26px;
+	font-weight: 400;
+	margin-top: 0
+}
+
+.row__sub {
+	text-align: center;
+	font-size: 18px;
+	font-weight: 400;
+	margin: 0;
+	color: #8198ae
+}
+
+.btn {
+
+	background-color: #3a9fff;
+	border-radius: 20px;
+	padding: 10px 25px;
+	color: #fff;
+	box-shadow: 0 18px 13px -6px rgba(0, 0, 0, .2);
+	transition: all .4s;
+	-webkit-transition: all .4s;
+	-moz-transition: all .4s;
+	-ms-transition: all .4s;
+	-o-transition: all .4s
+}
+
+.btn:hover {
+	box-shadow: 0 25px 18px -6px rgba(0, 0, 0, .2);
+	background-color: #63b2fc;
+	color: #fff
+}
+
+.btn__revert {
+	background-color: transparent;
+	color: #8198ae;
+	box-shadow: none;
+	border: 1px solid #c9d9e9
+}
+
+.btn__revert:hover {
+	background-color: transparent;
+	color: #1f4568;
+	box-shadow: none;
+	border: 1px solid #8198ae
+}
+
+.btn__violet {
+	background-color: #6f79ff
+}
+
+.btn__violet:hover {
+	background-color: #878ef3
+}
+
+.btn__blue {
+	background-color: #3a9fff
+}
+
+.btn__blue:hover {
+	background-color: #63b2fc
+}
+
+.btn__width {
+	width: 120px
+}
+
+.btn__white {
+	background-color: #fff;
+	border: 1px solid #ededed;
+	color: #8198ae
+}
+
+.btn__white:hover {
+	background-color: #fff;
+	color: #8198ae
+}
+
+.row__sub__light {
+	color: #aec0d2
+}
+
+.site {
+	text-align: center
+}
+
+.site__title {
+	font-size: 30px;
+	margin: 0;
+	text-align: center
+}
+
+.site__subtitle {
+	font-size: 22px;
+	color: #8198ae;
+	margin: 15px 0 40px 0;
+	text-align: center
+}
+
+.site__img {
+	margin-top: 50px;
+	display: inline-block;
+	width: 77%
+}
+
+.site__box_link .btn__revert {
+	margin-left: 15px
+}
+
+.header {
+	padding: 30px 25px
+}
+
+.header__elenco {
+	padding: 0;
+	margin: 0;
+	list-style: none
+}
+
+.header__menu {
+	float: right
+}
+
+.header__el {
+	padding: 0 25px;
+	display: inline-block
+}
+
+.header__img {
+	display: inline-block;
+	vertical-align: middle
+}
+
+.header__logo,
+.header__menu {
+	display: inline-block;
+	vertical-align: middle
+}
+
+.header__title {
+	font-size: 18px;
+	margin: 0;
+	margin-left: 10px;
+	display: inline-block;
+	line-height: 18px;
+	vertical-align: middle
+}
+
+.header__light {
+	color: #8198ae
+}
+
+.header__link {
+	color: #1f4568;
+	font-size: 14px
+}
+
+.header__link:hover {
+	text-decoration: none;
+	color: #3a9fff
+}
+
+.navbar_toggle .icon_bar {
+	background-color: #8198ae;
+}
+
+.navbar_toggle {
+	margin: 5px 0
+}
+
+.contacts_title_ag {
+	margin: 0;
+	margin-left: 0;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 22px;
+	margin-left: 10px
+}
+
+.contacts__link {
+	color: #1f4568
+}
+
+.contacts__light {
+	color: #8198ae
+}
+
+.contacts__address {
+	margin-top: 20px;
+	color: #8198ae;
+	font-size: 16px;
+	line-height: 27px;
+	padding-bottom: 12px;
+	margin-bottom: 17px;
+	position: relative
+}
+
+.contacts__address:after {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 1px;
+	background-color: #8198ae;
+	bottom: 0;
+	left: 0
+}
+
+.contacts__info {
+	color: #8198ae;
+	font-size: 16px;
+	margin-bottom: 2px
+}
+
+.contacts__info_link {
+	color: #3a9fff;
+	text-decoration: none
+}
+
+.form_group {
+	margin-bottom: 20px;
+	display: table;
+	width: 100%;
+	position: relative
+}
+
+.form__field {
+	height: 50px;
+	position: relative;
+	border: none;
+	padding: 10px 12px;
+	width: 100%;
+	border-radius: 6px;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+	transition: all .4s;
+	-webkit-transition: all .4s;
+	-moz-transition: all .4s;
+	-ms-transition: all .4s;
+	-o-transition: all .4s;
+	z-index: 2
+}
+
+.form__field__half {
+	width: 50%;
+	float: left
+}
+
+.form__field__half:first-of-type {
+	padding-right: 15px
+}
+
+.form__textarea {
+	height: 200px
+}
+
+.btn__up {
+	position: absolute;
+	bottom: -15px;
+	right: 25px;
+	z-index: 3
+}
+
+.career_title {
+	color: #fff;
+	font-size: 28px
+}
+
+.career_sub {
+	font-size: 14px;
+	color: #c7cbff;
+	margin-top: 0;
+	margin-bottom: 30px
+}
+
+.career_img {
+	position: absolute;
+	bottom: 0;
+	width: 65%;
+	z-index: 0;
+	left: 20%
+}
+
+.footer {
+	background-color: #1f4467;
+	padding: 40px 0
+}
+
+.footer__title {
+	font-size: 18px;
+	margin: 0;
+	margin-left: 0;
+	margin-left: 10px;
+	display: inline-block;
+	line-height: 18px;
+	vertical-align: middle;
+	color: #3a9fff
+}
+
+.footer__light {
+	color: #fff
+}
+
+.footer__social {
+	float: right
+}
+
+.footer__social_l {
+	margin-left: 15px;
+	vertical-align: middle
+}
+
+@media screen and (max-width:1024px) {
+	.collapse {
+		display: none
+	}
+	.navbar_toggle {
+		margin: 0;
+		display: inline-block;
+		margin-right: 10px;
+		margin-top: 10px
+	}
+	.header__container {
+		width: 100%;
+		padding: 0
+	}
+	.header__menu {
+		width: 100%
+	}
+	.header {
+		background-color: #fff;
+		padding: 0;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 4
+	}
+	.header__logo {
+		padding: 12px 20px 12px 20px
+	}
+	.header__el {
+		display: block;
+		padding: 10px 20px;
+		border-top: 1px solid #ededed
+	}
+	.header .btn__white,
+	.header .btn__white:hover {
+		padding: 0;
+		border: 0;
+		box-shadow: none;
+		color: #fff;
+		background-color: transparent
+	}
+	.header__el__blue {
+		background-color: #3a9fff
+	}
+}
+
+@media screen and (max-width:767px) {
+	.footer {
+		padding: 25px 0
+	}
+	.site__img {
+		width: 100%
+	}
+	.form {
+		margin-top: 30px
+	}
+	.form__field__half:first-of-type {
+		margin-bottom: 10px;
+		padding-right: 0
+	}
+	.form__field__half {
+		width: 100%;
+		float: none
+	}
+	.form_group {
+		margin-bottom: 10px
+	}
+}
+
+@media screen and (max-width:480px) {
+	.footer {
+		padding: 15px 0
+	}
+	.footer__img {
+		width: 15px
+	}
+	.footer__title {
+		font-size: 16px;
+		margin-left: 5px
+	}
+	.sect {
+		padding: 20px 0
+	}
+	.sect__padding_top {
+		padding-top: 80px
+	}
+	.row__sub {
+		font-size: 16px
+	}
+	.row__title {
+		font-size: 20px;
+		margin-bottom: 5px
+	}
+	.site__title {
+		font-size: 24px
+	}
+	.site__subtitle {
+		font-size: 18px;
+		margin: 10px 0 20px 0
+	}
+	.site__img {
+		margin-top: 30px
+	}
+	.row__margin {
+		margin-top: 30px
+	}
+	.btn {
+		font-size: 12px;
+		padding: 8px 8px
+	}
+	.btn__width {
+		width: 100px
+	}
+	.career_title {
+		font-size: 18px;
+		margin-top: 0
+	}
+	.career_sub {
+		font-size: 14px;
+		margin-bottom: 20px
+	}
+}
+
+
+/* CARD MAUALN */
+
+.service_container {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+.service_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.service_card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 360px;
+  max-height: 400px;
+  min-width: 250px;
+  margin: 16px;
+  padding: 20px;
+  background: #fff;
+}
+
+.service_card_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service_card__loading,
+.service_card__title:empty,
+.service_card__paragraph:empty {
+  border-radius: 4px;
+  background: linear-gradient(-90deg, #d1d1d1, #f1f1f1, #d1d1d1) no-repeat;
+  background-size: 200% 200%;
+  -webkit-animation: card__loading 1.5s infinite;
+          animation: card__loading 1.5s infinite;
+}
+.service_card__title {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  color: black;
+}
+.service_card__title:empty {
+  width: 100%;
+  height: 15px;
+  margin-bottom: 30px;
+}
+.service_card__paragraph {
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 80px;
+}
+.service_card__paragraph:empty {
+  width: 100%;
+  height: 10px;
+}
+.service_shadow {
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+  will-change: transform;
+}
+.service_shadow:before,
+.service_shadow:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none;
+  will-change: opacity;
+}
+.service_shadow:before {
+  box-shadow: 0 35px 50px -30px rgba(0,0,0,0.2);
+}
+.service_shadow:after {
+  opacity: 0;
+  box-shadow: 0 55px 50px -17px rgba(0,0,0,0.22);
+}
+.service_shadow:hover {
+  transform: translateY(-5%);
+}
+.service_shadow:hover:before {
+  opacity: 0;
+}
+.service_shadow:hover:after {
+  opacity: 1;
+}
+.service_shadow:active {
+  transform: translateY(5%) scale(0.9);
+}
+.service_shadow:active:before {
+  opacity: 1;
+}
+.service_shadow:active:after {
+  opacity: 0;
+}
+@-webkit-keyframes card__loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes card__loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+.section2 .cards .card{
+	background-color: rgba(0, 0, 0, 0);
+	border: 0;
+}
+
+.sect__padding_bottom, .sect__padding_bottom .row__sub, .row__title, .row {
+	text-align: left;
+}
