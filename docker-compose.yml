@@ -3,10 +3,10 @@ version: '3.7'
 services:
   server:
     build:
-      context: ./project-app-1/backend/auth-api
+      context: ./backend/auth-api
       dockerfile: Dockerfile
-    image: wobble-server-dc
-    container_name: wobble-node-server-dc
+    image: medico-server
+    container_name: medico-node-server
     command: npm run server
     ports:
       - "4000:4000"
@@ -18,10 +18,10 @@ services:
 
   client:
     build:
-      context: ./project-app-1
+      context: ./frontend
       dockerfile: Dockerfile
-    image: wobble-client-dc
-    container_name: wobble-node-client-dc
+    image: medico-client
+    container_name: medico-node-client
     command: npm run start
     depends_on:
       - server

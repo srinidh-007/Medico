@@ -1,16 +1,22 @@
 
+# Install node v16
 FROM node:14-alpine
 
-RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
+# Set the workdir /usr/src/medico
+WORKDIR /usr/src/medico
 
-WORKDIR /home/node/app
+# Copy the package.json to workdir
+COPY package.json /usr/src/medico
 
-COPY package*.json ./
-
-USER node
-
+# Run npm install - install the npm dependencies
 RUN npm install
 
-COPY --chown=node:node . .
+# Copy application source
+COPY . .
 
-CMD [ "npm start", "server.js" ]
+
+# Expose application ports
+EXPOSE 4000
+
+# Start the application
+CMD ["npm", "start"]
