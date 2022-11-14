@@ -1,7 +1,7 @@
 # Medico App
 ## Group 28
 
-### Team Memebers* Y Srinidh Reddy 
+### Team Memebers
 * Y Srinidh Reddy 
 * Sree Nithish B 
 * Jupuru Harshith 
