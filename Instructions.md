@@ -1,12 +1,13 @@
 # Medico App
 ## Group 28
 
-### Team Memebers
-* Sree Nithish B (S20190010166)
-* Jupuru Harshith (S20190010072)
-* Chebrolu Jaswanth (S20190010031)
-* Sandeep Thadem (S20190010176)
-* Y Srinidh Reddy  (S20190010199)
+### Team Memebers* Y Srinidh Reddy 
+* Y Srinidh Reddy 
+* Sree Nithish B 
+* Jupuru Harshith 
+* Chebrolu Jaswanth 
+* Sandeep Thadem 
+
 
 
 ## Quick Overview
@@ -40,7 +41,7 @@ password: 123456
 
 ### Admin / Doctor Login Id
 
-username: sree_nithish_b
+username: srinidh
 password: 123456
 
 
