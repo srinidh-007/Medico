@@ -1,12 +1,5 @@
-# Medico App
-## Group 28
+# Medico Application
 
-### Team Memebers
-* Y Srinidh Reddy 
-* Sree Nithish B 
-* Jupuru Harshith 
-* Chebrolu Jaswanth 
-* Sandeep Thadem 
 
 
 
